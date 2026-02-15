@@ -227,10 +227,10 @@ h1{font-size:28px;margin-bottom:8px}
 <ol class="steps">
 <li>确保你的电脑已安装 <b>Node.js 18+</b></li>
 <li>打开终端，运行以下命令：
-<div class="code-block"><button class="copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent)">复制</button><code>npx qiyuan-remote /你的工作区路径</code></div>
+<div class="code-block"><button class="copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent)">复制</button><code>npx github:zhongyoudong/qiyuan-remote /你的工作区路径</code></div>
 </li>
 <li>如果需要指定服务器地址：
-<div class="code-block"><button class="copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent)">复制</button><code>npx qiyuan-remote /你的工作区路径 --host 129.204.22.176</code></div>
+<div class="code-block"><button class="copy" onclick="navigator.clipboard.writeText(this.nextElementSibling.textContent)">复制</button><code>npx github:zhongyoudong/qiyuan-remote /你的工作区路径 --host 129.204.22.176</code></div>
 </li>
 <li>连接成功后，告诉牛牛你的 Agent 名称即可开始远程协作</li>
 </ol></div>

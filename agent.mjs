@@ -85,9 +85,10 @@ function handleRequest(msg) {
         return { success: true, entries };
       }
       case 'runCommand': {
+        const cmdTimeout = msg.timeout || 120000;
         try {
           const output = execSync(msg.command, {
-            cwd: workDir, timeout: 30000, maxBuffer: 1024 * 1024,
+            cwd: msg.cwd || workDir, timeout: cmdTimeout, maxBuffer: 5 * 1024 * 1024,
             encoding: 'utf-8', shell: true
           });
           return { success: true, output };

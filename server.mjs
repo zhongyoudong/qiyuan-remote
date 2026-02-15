@@ -167,8 +167,9 @@ async function handleList(req, res) {
 async function handleRun(req, res) {
   const body = await readBody(req);
   if (!body.agent || !body.command) return json(res, { error: '缺少参数' }, 400);
+  const timeout = body.timeout || 120000;
   try {
-    const result = await sendToAgent(body.agent, 'runCommand', { command: body.command }, 60000);
+    const result = await sendToAgent(body.agent, 'runCommand', { command: body.command, cwd: body.cwd, timeout }, timeout + 5000);
     json(res, result);
   } catch (e) { json(res, { error: e.message }, 500); }
 }

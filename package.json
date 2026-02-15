@@ -1,0 +1,19 @@
+{
+  "name": "qiyuan-remote",
+  "version": "1.0.0",
+  "description": "起源远程工作区代理 - 让AI助手远程读写你的项目文件",
+  "main": "server.mjs",
+  "bin": {
+    "qiyuan-remote": "./agent.mjs"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "keywords": ["remote", "workspace", "ai", "agent"],
+  "author": "zhongyoudong",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}
